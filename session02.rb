@@ -1,5 +1,19 @@
 class Session02
+
   def initialize
+  end
+
+  # test which values return true or false
+  def test_truth_value
+    puts 'true.nil? = ' + (true.nil?).to_s
+    puts 'false.nil? = ' + (false.nil?).to_s
+    puts 'nil.nil? = ' + (nil.nil?).to_s
+    puts '1.nil? = ' + (1.nil?).to_s
+    puts '0.nil? = ' + (0.nil?).to_s
+    puts '"".nil? = ' + ("".nil?).to_s
+    puts '"a".nil? = ' + ("a".nil?).to_s
+    puts '"1".nil? = ' + ("1".nil?).to_s
+    puts '"0".nil? = ' + ("0".nil?).to_s
   end
 
   # test boolean in ruby
@@ -47,6 +61,7 @@ end
 
 session = Session02.new
 session.test_boolean
+session.test_truth_value
 session.test_regexp
 session.test_number_base
 session.test_range
