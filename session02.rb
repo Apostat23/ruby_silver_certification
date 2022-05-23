@@ -4,7 +4,7 @@ class Session02
   end
 
   # test which values return true or false
-  def test_truth_value
+  def test_truth_values
     puts 'true.nil? = ' + (true.nil?).to_s
     puts 'false.nil? = ' + (false.nil?).to_s
     puts 'nil.nil? = ' + (nil.nil?).to_s
@@ -42,6 +42,13 @@ class Session02
     puts '"abc" =~ /^a|b|c$/ = ' + ('abc' =~ /^a|b|c$/).to_s
   end
 
+  # defines regex to validate an email
+  def test_regex_email
+    puts '"
+    " =~ /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/ = ' + ('
+    ' =~ /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/).to_s
+  end
+
   # test number bases in ruby
   def test_number_base
     puts '0xFF = ' + (0xFF).to_s
@@ -60,8 +67,8 @@ class Session02
 end
 
 session = Session02.new
-session.test_boolean
-session.test_truth_value
+session.test_truth_values
+session.test_boolean_comparisons
 session.test_regexp
 session.test_number_base
 session.test_range
