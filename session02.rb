@@ -16,8 +16,8 @@ class Session02
     puts '"0".nil? = ' + ("0".nil?).to_s
   end
 
-  # test boolean in ruby
-  def test_boolean
+  # test boolean comparisons in ruby
+  def test_boolean_comparisons
     puts 'true && false = ' + (true && false).to_s
     puts 'true || false = ' + (true || false).to_s
     puts '!true = ' + (!true).to_s
@@ -53,8 +53,8 @@ class Session02
 
   # test ranges in ruby
   def test_range
-    puts '1..10 = ' + (1..10).to_s
-    puts '1...10 = ' + (1...10).to_s
+    puts '1..10 = ' + (1..10).include?(10).to_s
+    puts '1...10 = ' + (1...10).include?(10).to_s
   end
 
 end
