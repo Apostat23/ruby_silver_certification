@@ -19,7 +19,7 @@ end
 
 # Convert string to different encoding
 def convert_string string: nil, encoding: nil
-  if encoding.nil? then encoding = Encoding.list.sample end
+  encoding = Encoding.list.sample if encoding.nil? 
   puts "Converting string to #{encoding}:"
   puts "--------------------------------"
   puts "String.encode(#{encoding}):"
@@ -28,4 +28,13 @@ def convert_string string: nil, encoding: nil
   puts string.encode(encoding, :invalid => :replace)
   puts "String.encode(#{encoding}, :invalid => :replace, :replace => '?'):"
   puts string.encode(encoding, :invalid => :replace, :replace => '?')
+end
+
+def show_encodings_for_bytes string: nil
+  string = 'diego' if string.nil?
+  puts "string = #{string}"
+  puts "#{string} encoding #{string.encoding}"
+  puts "#{string} bytes: #{string.bytes}"
+  puts "string encoded to ISO-8859-11 #{new = string.force_encoding("ISO-8859-11")}"
+  puts "#{string} bytes with ISO-8859-11 encoding #{new.bytes}"
 end
